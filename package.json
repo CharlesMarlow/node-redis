@@ -1,0 +1,27 @@
+{
+  "name": "node-redis",
+  "version": "1.0.0",
+  "description": "This project uses node.js and the Redis service to demonstrate\r how an app can benefit by caching data that's either rarely or \r never updated, in order to make less calls to the server and \r to improve app speed by fetching cached data instead of springing\r up fresh data for every single call.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesMarlow/node-redis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlesMarlow/node-redis/issues"
+  },
+  "homepage": "https://github.com/CharlesMarlow/node-redis#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
