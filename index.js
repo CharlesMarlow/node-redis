@@ -11,7 +11,11 @@ const app = express();
 
 // Set app response
 const setResponse = (username, repos) => {
-    return `<h2>This ${username} has ${repos} public repositories</h2>`;
+    return (
+        `<div>
+            <h2>${username} has ${repos} public repositories</h2>
+        </div>`
+    );
 };
 
 // Make request to Github to fetch data
@@ -22,7 +26,6 @@ const getRepos = async(req, res, next) => {
         const { username } = req.params;
         const response = await fetch(`https://api.github.com/users/${username}`);
         const data = await response.json();
-        // console.log('===>>>>', data);
         const repos = data.public_repos;
 
         // Set to Redis for caching purposes- expiry duration of 1hr
